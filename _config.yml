@@ -1,4 +1,4 @@
 theme: jekyll-theme-minimal
-paginate: 5
+paginate: 1
 plugins:
 - jekyll-paginate
