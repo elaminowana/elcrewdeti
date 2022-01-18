@@ -9,6 +9,12 @@ import { PortafolioComponent } from './pages/portafolio/portafolio.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ItemComponent } from './pages/item/item.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { InfoPaginaComponent } from './services/info-pagina/info-pagina.component';
+
+
+import {HttpClientModule} from '@angular/common/http';
+
+
 
 @NgModule({
   declarations: [
@@ -19,10 +25,12 @@ import { ContactComponent } from './pages/contact/contact.component';
     AboutComponent,
     ItemComponent,
     ContactComponent,
+    InfoPaginaComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
