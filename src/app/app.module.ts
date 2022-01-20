@@ -13,6 +13,7 @@ import { InfoPaginaComponent } from './services/info-pagina/info-pagina.componen
 
 
 import {HttpClientModule} from '@angular/common/http';
+import { SearchComponent } from './pages/search/search.component';
 
 
 
@@ -26,6 +27,7 @@ import {HttpClientModule} from '@angular/common/http';
     ItemComponent,
     ContactComponent,
     InfoPaginaComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
