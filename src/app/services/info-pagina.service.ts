@@ -10,20 +10,14 @@ export class InfoPaginaService {
   info: InfoPagina = {};
   cargada = false;
 
+  equipo: any[] = [];
+
   constructor( private http: HttpClient) { 
 
+    this.cargarInfo();
+    this.cargarEquipo();
+
     //console.log('servicio de info pagina listo');
-
-    //leer archivo en JSON
-    this.http.get('assets/data/data-pagina.json')
-      .subscribe( (resp: InfoPagina) => {
-
-        this.cargada = true;
-        this.info = resp;
-        console.log( resp );
-      })
-      
-      
       /*el siguiente metodo no funciona
       .subscribe( resp => {
         console.log( resp['titulo'] );
@@ -31,4 +25,26 @@ export class InfoPaginaService {
 
 
   }
+
+private cargarInfo(){
+//leer archivo en JSON
+  this.http.get('assets/data/data-pagina.json')
+  .subscribe( (resp: InfoPagina) => {
+
+    this.cargada = true;
+    this.info = resp;
+  })
+}
+
+
+private cargarEquipo(){
+  this.http.get('https://portafolio-5535a-default-rtdb.firebaseio.com/Equipo.json')
+  .subscribe( (resp: any) => {
+
+    this.equipo = resp;
+  })
+
+}
+
+
 }

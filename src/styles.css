@@ -1,3 +1,8 @@
+
+
+
+
+
 @charset "UTF-8";
 /*!
  * animate.css - https://animate.style/
@@ -6,6 +11,30 @@
  *
  * Copyright (c) 2022 Animate.css
  */
+
+/*
+body{
+  padding: 1em;
+  background: white;
+  color: #777;
+  text-align: center;
+  font-family: "Gill sans", sans-serif;
+  width: 80%;
+  margin: 0 auto;
+}
+
+*/
+/*
+  Color del Loading
+*/
+svg path,
+svg rect{
+  fill: rgb(0, 0, 0);
+}
+
+
+
+
 :root {
   --animate-duration: 3s;
   --animate-delay: 1s;
